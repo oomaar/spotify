@@ -46,8 +46,6 @@ export const theme = {
 };
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
-  
   *, *::before, *::after {
     box-sizing: border-box;
   }

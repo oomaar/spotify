@@ -32,8 +32,21 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          {/* Box Icons CDN */}
           <link
             href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+            rel="stylesheet"
+          />
+
+          {/* Google Fonts CDN */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
         </Head>
