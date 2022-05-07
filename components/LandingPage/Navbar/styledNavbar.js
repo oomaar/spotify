@@ -16,6 +16,9 @@ export const NavbarContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  inset: 0;
+  bottom: unset;
 
   @media screen and (max-width: 1100px) {
     padding: 0.5rem 8rem;
