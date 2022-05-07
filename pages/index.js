@@ -1,4 +1,4 @@
-import { Navbar } from "../components/LandingPage";
+import { Hero, Navbar } from "../components/LandingPage";
 import { NextHead } from "../global/NextHead";
 
 export default function Home() {
@@ -7,6 +7,7 @@ export default function Home() {
       <NextHead title="Listening is everything - Spotify" />
 
       <Navbar />
+      <Hero />
     </div>
   );
 }
