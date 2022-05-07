@@ -102,3 +102,5 @@ export const FooterSocialIcon = styled.div`
     color: ${({ theme }) => theme.colors.primary};
   }
 `;
+
+export const FooterButtom = styled.div``;

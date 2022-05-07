@@ -7,6 +7,7 @@ import {
   FooterTop,
   FooterSocialContaier,
   FooterSocialIcon,
+  FooterButtom,
 } from "./styledFooter";
 
 export const Footer = () => {
@@ -73,6 +74,7 @@ export const Footer = () => {
           </FooterSocialIcon>
         </FooterSocialContaier>
       </FooterTop>
+      <FooterButtom>bottom</FooterButtom>
     </FooterContainer>
   );
 };
