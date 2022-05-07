@@ -1,8 +1,8 @@
 import {
-  HeroButton,
   HeroContainer,
-  HeroSubtitle,
   HeroTitle,
+  HeroSubtitle,
+  HeroButton,
 } from "./styledHero";
 
 export const Hero = () => {
