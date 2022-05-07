@@ -2,16 +2,16 @@ import { useState } from "react";
 import {
   NavbarContainer,
   NavLogo,
+  NavbarBackDrop,
+  NavResponsive,
+  NavResponsiveLine,
+  NavRightContainer,
+  CloseIcon,
   NavList,
   NavLink,
   NavButtons,
-  NavRightContainer,
   NavButton,
-  NavResponsive,
-  NavResponsiveLine,
   NavResponsiveLogo,
-  CloseIcon,
-  NavbarBackDrop,
 } from "./styledNavbar";
 
 export const Navbar = () => {

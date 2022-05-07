@@ -49,6 +49,20 @@ export const NavLogo = styled.div`
   }
 `;
 
+export const NavbarBackDrop = styled.div`
+  transform: translateX(-500vw);
+  transition: ${transitionFast};
+
+  @media screen and (max-width: ${xlScreen}) {
+    transform: ${({ toggleNavbar }) =>
+      toggleNavbar ? "translateX(0)" : "translateX(-500vw)"};
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    inset: 0;
+    z-index: ${({ theme }) => theme.zIndex.modal};
+  }
+`;
+
 export const NavResponsive = styled.div`
   display: none;
 
@@ -70,42 +84,6 @@ export const NavResponsiveLine = styled.div`
   height: 0.15rem;
   background-color: #fff;
   border-radius: 2rem;
-`;
-
-export const NavResponsiveLogo = styled.div`
-  display: none;
-
-  @media screen and (max-width: ${xlScreen}) {
-    display: block;
-    margin-top: auto;
-  }
-`;
-
-export const CloseIcon = styled.div`
-  display: none;
-
-  @media screen and (max-width: ${xlScreen}) {
-    display: block;
-    position: absolute;
-    right: 2rem;
-    font-size: ${({ theme }) => theme.font.mdFont};
-    cursor: pointer;
-    color: ${({ theme }) => theme.colors.primary};
-  }
-`;
-
-export const NavbarBackDrop = styled.div`
-  transform: translateX(-500vw);
-  transition: ${transitionFast};
-
-  @media screen and (max-width: ${xlScreen}) {
-    transform: ${({ toggleNavbar }) =>
-      toggleNavbar ? "translateX(0)" : "translateX(-500vw)"};
-    position: fixed;
-    background: rgba(0, 0, 0, 0.8);
-    inset: 0;
-    z-index: ${({ theme }) => theme.zIndex.modal};
-  }
 `;
 
 export const NavRightContainer = styled.div`
@@ -132,6 +110,19 @@ export const NavRightContainer = styled.div`
 
   @media screen and (max-width: 630px) {
     width: 100%;
+  }
+`;
+
+export const CloseIcon = styled.div`
+  display: none;
+
+  @media screen and (max-width: ${xlScreen}) {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    font-size: ${({ theme }) => theme.font.mdFont};
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
@@ -207,5 +198,14 @@ export const NavButton = styled.button`
 
   @media screen and (max-width: ${smScreen}) {
     font-size: calc(${({ theme }) => theme.font.smFont} + 0.5rem);
+  }
+`;
+
+export const NavResponsiveLogo = styled.div`
+  display: none;
+
+  @media screen and (max-width: ${xlScreen}) {
+    display: block;
+    margin-top: auto;
   }
 `;
