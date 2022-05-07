@@ -1,4 +1,4 @@
-import { Hero, Navbar } from "../components/LandingPage";
+import { Footer, Hero, Navbar } from "../components/LandingPage";
 import { NextHead } from "../global/NextHead";
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
 
       <Navbar />
       <Hero />
+      <Footer />
     </div>
   );
 }
