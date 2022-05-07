@@ -8,6 +8,11 @@ import {
   FooterSocialContaier,
   FooterSocialIcon,
   FooterButtom,
+  FooterButtomLinks,
+  FooterButtomLink,
+  FooterCopyContainer,
+  FooterLanguageButton,
+  FooterCopy,
 } from "./styledFooter";
 
 export const Footer = () => {
@@ -74,7 +79,24 @@ export const Footer = () => {
           </FooterSocialIcon>
         </FooterSocialContaier>
       </FooterTop>
-      <FooterButtom>bottom</FooterButtom>
+      <FooterButtom>
+        <FooterButtomLinks>
+          <FooterButtomLink>Legal</FooterButtomLink>
+          <FooterButtomLink>Privacy Center</FooterButtomLink>
+          <FooterButtomLink>Privacy Policy</FooterButtomLink>
+          <FooterButtomLink>Cookies</FooterButtomLink>
+          <FooterButtomLink>About Ads</FooterButtomLink>
+        </FooterButtomLinks>
+        <FooterCopyContainer>
+          <FooterLanguageButton>
+            <i className="bx bx-world" /> Egypt (English)
+          </FooterLanguageButton>
+          <FooterCopy>
+            <span>Not The Real Spotify</span>
+          </FooterCopy>
+          <FooterCopy>© 2022 Spotify AB</FooterCopy>
+        </FooterCopyContainer>
+      </FooterButtom>
     </FooterContainer>
   );
 };

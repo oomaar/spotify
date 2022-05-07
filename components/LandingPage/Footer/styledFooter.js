@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {
   lgScreen,
+  smScreen,
   transitionFast,
   xlScreen,
 } from "../../../global/GlobalStyle";
@@ -8,7 +9,7 @@ import {
 export const FooterContainer = styled.footer`
   background: #000;
   color: #fff;
-  padding: 2rem 10rem 0.5rem;
+  padding: 2rem 10rem 8rem;
 
   @media screen and (max-width: 1100px) {
     padding: 2rem 8rem 0.5rem;
@@ -90,9 +91,12 @@ export const FooterSocialContaier = styled.div`
 export const FooterSocialIcon = styled.div`
   background-color: ${({ theme }) => theme.colors.containerColor};
   border-radius: 100%;
-  padding: 1rem;
+  padding: 0.9rem;
   font-size: 2rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   i {
     transition: ${transitionFast};
@@ -103,4 +107,79 @@ export const FooterSocialIcon = styled.div`
   }
 `;
 
-export const FooterButtom = styled.div``;
+export const FooterButtom = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: ${smScreen}) {
+    flex-direction: column;
+  }
+`;
+
+export const FooterButtomLinks = styled.div`
+  display: flex;
+  gap: 0 1rem;
+  flex-wrap: wrap;
+`;
+
+export const FooterButtomLink = styled.a`
+  color: ${({ theme }) => theme.colors.textColor};
+  cursor: pointer;
+  transition: ${transitionFast};
+  margin: 0.5rem 0;
+
+  :hover {
+    color: ${({ theme }) => theme.colors.textHover};
+  }
+`;
+
+export const FooterCopyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
+
+export const FooterLanguageButton = styled.button`
+  margin: 2rem 0 1.5rem;
+  background: transparent;
+  color: ${({ theme }) => theme.colors.textColor};
+  font-size: 1.1rem;
+  transition: ${transitionFast};
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+  border: 0;
+  outline: 0;
+
+  :hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  :hover i {
+    color: ${({ theme }) => theme.colors.textColor};
+  }
+`;
+
+export const FooterCopy = styled.h6`
+  font-size: 0.75rem;
+  color: ${({ theme }) => theme.colors.textColor};
+  margin: 0;
+  transition: ${transitionFast};
+
+  span {
+    font-size: 0.85rem;
+  }
+
+  @media screen and (max-width: ${smScreen}) {
+    text-align: center;
+    width: 100%;
+  }
+
+  :hover {
+    transform: scale(1.2);
+  }
+`;
