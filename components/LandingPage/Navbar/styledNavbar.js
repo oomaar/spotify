@@ -19,6 +19,7 @@ export const NavbarContainer = styled.nav`
   position: fixed;
   inset: 0;
   bottom: unset;
+  z-index: ${({ theme }) => theme.zIndex.nav};
 
   @media screen and (max-width: 1100px) {
     padding: 0.5rem 8rem;
