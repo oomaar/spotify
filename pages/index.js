@@ -1,3 +1,9 @@
+import { NextHead } from "../global/NextHead";
+
 export default function Home() {
-  return <h1>My page</h1>;
+  return (
+    <div>
+      <NextHead title="Listening is everything - Spotify" />
+    </div>
+  );
 }
