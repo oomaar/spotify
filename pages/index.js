@@ -1,14 +1,11 @@
-import { Footer, Hero, Navbar } from "../components/LandingPage";
+import { LandingContainer } from "../containers";
 import { NextHead } from "../global/NextHead";
 
 export default function Home() {
   return (
     <div>
       <NextHead title="Listening is everything - Spotify" />
-
-      <Navbar />
-      <Hero />
-      <Footer />
+      <LandingContainer />
     </div>
   );
 }
