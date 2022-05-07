@@ -7,6 +7,13 @@ export const mdScreen = `425px`;
 export const lgScreen = `768px`;
 export const xlScreen = `1024px`;
 
+// Constants
+export const NavHeight = `5rem`;
+
+// transitions
+export const transitionFast = `all 0.3s ease-in`;
+export const transitionSlow = `all 0.5s ease-in`;
+
 export const theme = {
   colors: {
     primary: `#1ed760`,
