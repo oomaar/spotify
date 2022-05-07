@@ -59,4 +59,9 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
   }
+
+  ::selection {
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: #000;
+  }
 `;
