@@ -1,6 +1,7 @@
-import { SignupHeader } from "../components/SignupPage";
+import { SignupHeader, SignupOptions } from "../components/SignupPage";
 import styled from 'styled-components';
 import { NextHead } from "../global/NextHead";
+import { lgScreen } from "../global/GlobalStyle";
 
 const PageContainer = styled.main`
   border: 1px solid red;
@@ -10,6 +11,10 @@ const PageContainer = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: ${lgScreen}) {
+    width: 100%;
+  }
 `;
 
 const Signup = () => {
@@ -18,6 +23,7 @@ const Signup = () => {
             <NextHead title="Sign up - Spotify" />
 
             <SignupHeader />
+            <SignupOptions />
         </PageContainer>
     )
 }

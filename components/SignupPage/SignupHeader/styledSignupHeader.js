@@ -22,4 +22,5 @@ export const SignupHeaderText = styled.p`
   font-size: 2rem;
   color: #000;
   font-weight: ${({ theme }) => theme.weight.bold};
+  text-align: center;
 `;
