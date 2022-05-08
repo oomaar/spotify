@@ -1,5 +1,6 @@
 import { SignupHeader } from "../components/SignupPage";
 import styled from 'styled-components';
+import { NextHead } from "../global/NextHead";
 
 const PageContainer = styled.main`
   border: 1px solid red;
@@ -14,6 +15,8 @@ const PageContainer = styled.main`
 const Signup = () => {
     return (
         <PageContainer>
+            <NextHead title="Sign up - Spotify" />
+
             <SignupHeader />
         </PageContainer>
     )
