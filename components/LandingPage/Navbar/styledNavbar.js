@@ -59,7 +59,7 @@ export const NavbarBackDrop = styled.div`
 
   @media screen and (max-width: ${xlScreen}) {
     transform: ${({ toggleNavbar }) =>
-      toggleNavbar ? "translateX(0)" : "translateX(-500vw)"};
+    toggleNavbar ? "translateX(0)" : "translateX(-500vw)"};
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
     inset: 0;
@@ -99,7 +99,7 @@ export const NavRightContainer = styled.div`
 
   @media screen and (max-width: ${xlScreen}) {
     transform: ${({ toggleNavbar }) =>
-      toggleNavbar ? "translateX(0)" : "translateX(500vw)"};
+    toggleNavbar ? "translateX(0)" : "translateX(500vw)"};
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 2rem;
@@ -181,7 +181,7 @@ export const NavButtons = styled.div`
   }
 `;
 
-export const NavButton = styled.button`
+export const NavButton = styled.a`
   color: ${({ theme }) => theme.colors.textColor};
   font-size: ${({ theme }) => theme.font.smFont};
   font-weight: ${({ theme }) => theme.weight.bold};

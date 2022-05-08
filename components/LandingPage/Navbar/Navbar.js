@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import {
   NavbarContainer,
@@ -48,7 +49,9 @@ export const Navbar = () => {
           </li>
         </NavList>
         <NavButtons>
-          <NavButton>Sign up</NavButton>
+          <Link href="/signup">
+            <NavButton>Sign up</NavButton>
+          </Link>
           <NavButton>Log in</NavButton>
         </NavButtons>
         <NavResponsiveLogo>
