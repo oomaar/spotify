@@ -65,7 +65,7 @@ export const SignupOptionsFooter = styled.div`
     top: 50%;
     background-color: #8a857f;
     width: 100px;
-    height: 2px;
+    height: 1px;
   }
 
   ::before {
@@ -75,6 +75,6 @@ export const SignupOptionsFooter = styled.div`
     right: 55%;
     background-color: #8a857f;
     width: 100px;
-    height: 2px;
+    height: 1px;
   }
 `;
