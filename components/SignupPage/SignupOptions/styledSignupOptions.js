@@ -40,7 +40,7 @@ export const SignupOptionsButton = styled.button`
 
   @media screen and (max-width: ${mdScreen}) {
     padding: 0.875rem 2rem;
-    width: 100%;
+    width: 90%;
   }
 
   @media screen and (max-width: ${smScreen}) {
