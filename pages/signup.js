@@ -1,4 +1,4 @@
-import { SignupHeader, SignupOptions } from "../components/SignupPage";
+import { SignupForm, SignupHeader, SignupOptions } from "../components/SignupPage";
 import styled from 'styled-components';
 import { NextHead } from "../global/NextHead";
 import { lgScreen } from "../global/GlobalStyle";
@@ -23,6 +23,7 @@ const Signup = () => {
 
       <SignupHeader />
       <SignupOptions />
+      <SignupForm />
     </PageContainer>
   )
 }
