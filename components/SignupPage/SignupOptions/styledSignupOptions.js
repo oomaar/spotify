@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { transitionFast } from "../../../global/GlobalStyle";
+import { mdScreen, smScreen, transitionFast } from "../../../global/GlobalStyle";
 
 export const SignupOptionsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem 0;
   margin-top: 3rem;
+  width: 100%;
 `;
 
 export const SignupOptionsButton = styled.button`
@@ -18,16 +19,33 @@ export const SignupOptionsButton = styled.button`
   padding: 0.875rem 3rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: ${transitionFast};
+  width: 320px;
+  margin: 0 auto;
 
   i {
     margin-right: 1rem;
+
+    @media screen and (max-width: ${mdScreen}) {
+      margin-right: 0.4rem;
+    }
   }
-  
+
   :hover {
     background: ${({ facebook }) => (facebook ? "#384f81" : "transparent")};
     transform: scale(1.1);
+  }
+
+  @media screen and (max-width: ${mdScreen}) {
+    padding: 0.875rem 2rem;
+    width: 100%;
+  }
+
+  @media screen and (max-width: ${smScreen}) {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
   }
 `;
 
@@ -54,7 +72,7 @@ export const SignupOptionsFooter = styled.div`
     content: "";
     position: absolute;
     top: 50%;
-    left: 30px;
+    right: 55%;
     background-color: #8a857f;
     width: 100px;
     height: 2px;

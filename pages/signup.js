@@ -4,7 +4,6 @@ import { NextHead } from "../global/NextHead";
 import { lgScreen } from "../global/GlobalStyle";
 
 const PageContainer = styled.main`
-  border: 1px solid red;
   width: 640px;
   margin: 0 auto;
   display: flex;
@@ -18,14 +17,14 @@ const PageContainer = styled.main`
 `;
 
 const Signup = () => {
-    return (
-        <PageContainer>
-            <NextHead title="Sign up - Spotify" />
+  return (
+    <PageContainer>
+      <NextHead title="Sign up - Spotify" />
 
-            <SignupHeader />
-            <SignupOptions />
-        </PageContainer>
-    )
+      <SignupHeader />
+      <SignupOptions />
+    </PageContainer>
+  )
 }
 
 export default Signup;
