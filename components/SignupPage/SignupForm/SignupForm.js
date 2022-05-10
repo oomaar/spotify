@@ -16,7 +16,7 @@ export const SignupForm = () => {
             <SignupFormForm onSubmit={handleSubmit}>
                 <SignupFormInputContainer>
                     <SignupFormLabel>What's your email?</SignupFormLabel>
-                    <SignupFormInput type="text" placeholder="Enter your email." />
+                    <SignupFormInput type="email" placeholder="Enter your email." />
                 </SignupFormInputContainer>
                 <SignupFormInputContainer>
                     <SignupFormLabel>Confirm your email</SignupFormLabel>
@@ -28,7 +28,7 @@ export const SignupForm = () => {
                 </SignupFormInputContainer>
                 <SignupFormInputContainer>
                     <SignupFormLabel>What should we call you?</SignupFormLabel>
-                    <SignupFormInput type="password" placeholder="Enter a profile name." />
+                    <SignupFormInput type="text" placeholder="Enter a profile name." />
                     <span>This appears on your profile.</span>
                 </SignupFormInputContainer>
                 <SignupFormButton type="submit">Sign up</SignupFormButton>

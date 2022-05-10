@@ -13,12 +13,16 @@ export const SignupFormForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.5rem 0;
-  padding-bottom: 10rem;
+  padding: 2rem 0 10rem;
 `;
 
 export const SignupFormInputContainer = styled.div`
   display: flex;
   flex-direction: column;
+
+  span {
+    margin: 1rem 0 0;
+  }
 `;
 
 export const SignupFormLabel = styled.label`
