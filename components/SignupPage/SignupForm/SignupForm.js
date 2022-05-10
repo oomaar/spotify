@@ -5,6 +5,7 @@ import {
     SignupFormLabel,
     SignupFormInput,
     SignupFormButton,
+    LoginRouter,
 } from "./styledSignupForm"
 
 export const SignupForm = () => {
@@ -30,6 +31,8 @@ export const SignupForm = () => {
                     <SignupFormInput type="password" placeholder="Enter a profile name." />
                     <span>This appears on your profile.</span>
                 </SignupFormInputContainer>
+                <SignupFormButton type="submit">Sign up</SignupFormButton>
+                <LoginRouter>Have an account? <a href="/login">Login</a>.</LoginRouter>
             </SignupFormForm>
         </SignupFormContainer>
     )

@@ -10,8 +10,10 @@ export const SignupFormContainer = styled.div`
 `;
 
 export const SignupFormForm = styled.form`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem 0;
+  padding-bottom: 10rem;
 `;
 
 export const SignupFormInputContainer = styled.div`
@@ -32,4 +34,27 @@ export const SignupFormInput = styled.input`
   border: 1px solid ${({ theme }) => theme.colors.textColor};
 `;
 
-export const SignupFormButton = styled.button``;
+export const SignupFormButton = styled.button`
+  color: #000;
+  background-color: ${({ theme }) => theme.colors.primary};
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 31.5rem;
+  outline: 0;
+  border: 0;
+  width: 100px;
+  align-self: center;
+  font-size: ${({ theme }) => theme.font.smFont};
+
+  :hover {
+    background-color: ${({ theme }) => theme.colors.textHover};
+  }
+`;
+
+export const LoginRouter = styled.div`
+  align-self: center;
+
+  a {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+`;
