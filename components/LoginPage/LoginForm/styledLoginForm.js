@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { transitionFast } from "../../../global/GlobalStyle";
+import { smScreen, transitionFast } from "../../../global/GlobalStyle";
 
 export const LoginFormContaier = styled.div`
   max-width: 450px;
@@ -12,6 +12,10 @@ export const LoginFormContaier = styled.div`
   p {
     font-weight: ${({ theme }) => theme.weight.medium};
     font-size: ${({ theme }) => theme.font.smFont};
+
+    @media screen and (max-width: ${smScreen}) {
+      text-align: center;
+    }
   }
 
   hr {
@@ -102,6 +106,10 @@ export const LoginFormRouteToSignUpContainer = styled.div`
 
   p {
     font-size: calc(${({ theme }) => theme.font.mdFont} - 1.5rem);
+
+    @media screen and (max-width: ${smScreen}) {
+      font-size: ${({ theme }) => theme.font.smFont};
+    }
   }
 
   a {
