@@ -1,4 +1,4 @@
-import { LoginPageHeader } from "../components/LoginPage";
+import { LoginForm, LoginPageHeader } from "../components/LoginPage";
 import { NextHead } from "../global/NextHead";
 import styled from "styled-components";
 
@@ -10,7 +10,9 @@ const Login = () => {
       <NextHead title="Login - Spotify" />
       <LoginPageHeader />
 
-      <PageContainer></PageContainer>
+      <PageContainer>
+        <LoginForm />
+      </PageContainer>
     </div>
   );
 };
