@@ -1,8 +1,4 @@
-import {
-  LoginForm,
-  LoginFormOptions,
-  LoginPageHeader,
-} from "../components/LoginPage";
+import { LoginForm, LoginPageHeader } from "../components/LoginPage";
 import { NextHead } from "../global/NextHead";
 import styled from "styled-components";
 
@@ -20,7 +16,6 @@ const Login = () => {
       <PageContainer>
         <div>
           <LoginForm />
-          <LoginFormOptions />
         </div>
       </PageContainer>
     </div>
