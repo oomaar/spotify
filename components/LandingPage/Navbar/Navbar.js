@@ -52,7 +52,9 @@ export const Navbar = () => {
           <Link href="/signup">
             <NavButton>Sign up</NavButton>
           </Link>
-          <NavButton>Log in</NavButton>
+          <Link href="/login">
+            <NavButton>Log in</NavButton>
+          </Link>
         </NavButtons>
         <NavResponsiveLogo>
           <NavLogo>
