@@ -1,6 +1,6 @@
 import { LoginForm, LoginPageHeader } from "../components/LoginPage";
 import { NextHead } from "../global/NextHead";
-import { getSession, useSession } from "next-auth/react";
+import { getSession, useSession, getProviders } from "next-auth/react";
 import styled from "styled-components";
 
 const PageContainer = styled.main`
