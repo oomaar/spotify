@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@next-auth/firebase-adapter": "0.1.2-pr.183-76202b42.8",
+    "axios": "^0.27.2",
     "firebase": "^9.8.1",
     "next": "latest",
     "next-auth": "^4.3.4",
