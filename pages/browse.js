@@ -27,7 +27,19 @@ const Browse = () => {
 export default Browse;
 
 export async function getServerSideProps(context) {
+  const { res } = context;
   const session = await getSession(context);
+
+  if (!session) {
+    res.statusCode = 302;
+    res.setHeader("Location", "/login");
+
+    return {
+      props: {
+        session
+      },
+    };
+  }
 
   return {
     props: {
