@@ -1,11 +1,29 @@
+import axios from "axios";
+import {
+  getFirestore,
+  collection,
+  query,
+  where,
+  getDocs,
+  doc,
+} from "firebase/firestore";
 import { getSession, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { db } from "../firebase.config";
 
 const Browse = () => {
   // This screen supposed to be Private
   const { data: session, loading } = useSession();
   const router = useRouter();
+  const [data, setData] = useState({});
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await axios.get(`https://api.spotify.com/v1/tracks`);
+  //     // { { headers: {"Authorization" : `Bearer ${token}`} } })
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (!session && !loading) {
@@ -36,7 +54,7 @@ export async function getServerSideProps(context) {
 
     return {
       props: {
-        session
+        session,
       },
     };
   }
