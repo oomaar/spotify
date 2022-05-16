@@ -1,4 +1,5 @@
-import { signOut } from "next-auth/react";
+import { getSession, signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 const Browse = () => {
