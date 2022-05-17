@@ -39,7 +39,7 @@ const Browse = () => {
   // useEffect(() => {
   //   const fetchData = async () => {
   //     const response = await axios.get(`https://api.spotify.com/v1/tracks`,
-  //       { headers: { Authorization: `Bearer ${user.uid}` } }
+  //       { headers: { Authorization: `Bearer ${user.refreshToken}` } }
   //     ).then(res => setData(res.data))
   //   };
   //   fetchData();
