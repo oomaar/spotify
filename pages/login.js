@@ -11,19 +11,13 @@ const Login = () => {
   return (
     <div>
       <NextHead title="Login - Spotify" />
-      {!session ? (
-        <>
-          <LoginPageHeader />
+      <LoginPageHeader />
 
-          <PageContainer>
-            <div>
-              <LoginForm />
-            </div>
-          </PageContainer>
-        </>
-      ) : (
-        <p>Logged In</p>
-      )}
+      <PageContainer>
+        <div>
+          <LoginForm />
+        </div>
+      </PageContainer>
     </div>
   );
 };
