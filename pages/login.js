@@ -14,9 +14,7 @@ const Login = () => {
       <LoginPageHeader />
 
       <PageContainer>
-        <div>
-          <LoginForm />
-        </div>
+        <div>{/* <LoginForm /> */}</div>
       </PageContainer>
     </div>
   );
