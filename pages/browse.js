@@ -1,8 +1,10 @@
+import { Sidebar } from "../components/BrowsePage";
+
 const Browse = () => {
   return (
     <div>
       <main>
-        {/* Sidebar on the left */}
+        <Sidebar />
         {/* Center browse component */}
       </main>
       <div>{/* Player at the bottom */}</div>
