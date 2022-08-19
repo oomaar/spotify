@@ -17,3 +17,5 @@
 // Next: we want those values NEXT_PUBLIC_CLIENT_SECRET NEXT_PUBLIC_CLIENT_ID
 
 // Pause: 1:22:00 13/8/2022
+
+// Pause: 48:00 20/8/2022 Facing an error

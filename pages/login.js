@@ -6,6 +6,10 @@ import { getProviders, signIn } from "next-auth/react";
 const PageContainer = styled.main`
   display: flex;
   justify-content: center;
+  background: #333333df;
+  position: fixed;
+  inset: 0;
+  color: #fff;
 `;
 
 const Login = ({ providers }) => {
@@ -16,25 +20,9 @@ const Login = ({ providers }) => {
       <NextHead title="Login - Spotify" />
       <LoginPageHeader />
 
-      <PageContainer>
-        {/* {Object.values(providers).map((provider) => (
-          <div>
-            <button>Login with {provider.name}</button>
-          </div>
-        ))} */}
-      </PageContainer>
+      <PageContainer>Login Screen</PageContainer>
     </div>
   );
 };
 
 export default Login;
-
-export async function getServerSideProps() {
-  const providers = await getProviders();
-
-  return {
-    props: {
-      providers,
-    },
-  };
-}
