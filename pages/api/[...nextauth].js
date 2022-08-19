@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import SpotifyProvider from "next-auth/providers/spotify";
-import { LOGIN_URL, spotifyAPI } from "../../lib/spotify";
+import GithubProvider from "next-auth/providers/github";
+import spotifyAPI, { LOGIN_URL } from "../../lib/spotify";
 
 async function refreshAccessToken(token) {
   try {
@@ -20,14 +21,14 @@ async function refreshAccessToken(token) {
       refreshToken: refreshedToken.refresh_token ?? token.refreshToken,
     };
   } catch (error) {
-    console.log(
+    console.error(
       "🚀 ~ file: [...nextauth].js ~ line 9 ~ refreshAccessToken ~ error)",
       error
     );
 
     return {
       ...token,
-      error: "Refresh Access Token Error",
+      error: "RefreshAccessTokenError",
     };
   }
 }
@@ -38,6 +39,10 @@ export default NextAuth({
       clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
       clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
       authorization: LOGIN_URL,
+    }),
+    GithubProvider({
+      clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
+      clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
     }),
   ],
   secret: process.env.JWT_SECRET,
@@ -58,7 +63,8 @@ export default NextAuth({
       }
 
       // Return previous token if the access token has not expired yet
-      if (Date.now < token.accessTokenExpires) {
+      if (Date.now() < token.accessTokenExpires) {
+        console.log("EXISTING ACCESS TOKEN IS VALID");
         return token;
       }
 
