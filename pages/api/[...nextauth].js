@@ -1,6 +1,5 @@
 import NextAuth from "next-auth";
 import SpotifyProvider from "next-auth/providers/spotify";
-import GithubProvider from "next-auth/providers/github";
 import spotifyAPI, { LOGIN_URL } from "../../lib/spotify";
 
 async function refreshAccessToken(token) {
@@ -9,22 +8,16 @@ async function refreshAccessToken(token) {
     spotifyAPI.setRefreshToken(token.refreshToken);
 
     const { body: refreshedToken } = await spotifyAPI.refreshAccessToken();
-    console.log(
-      "🚀 ~ file: [...nextauth].js ~ line 11 ~ refreshAccessToken ~ refreshToken",
-      refreshedToken
-    );
+    console.log("REFRESHED TOKEN IS ", refreshedToken);
 
     return {
       ...token,
       accessToken: refreshedToken.access_token,
-      accessTokenExpires: Date.now + refreshAccessToken.expires_in * 1000,
+      accessTokenExpires: Date.now + refreshedToken.expires_in * 1000,
       refreshToken: refreshedToken.refresh_token ?? token.refreshToken,
     };
   } catch (error) {
-    console.error(
-      "🚀 ~ file: [...nextauth].js ~ line 9 ~ refreshAccessToken ~ error)",
-      error
-    );
+    console.error(error);
 
     return {
       ...token,
@@ -40,10 +33,6 @@ export default NextAuth({
       clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
       authorization: LOGIN_URL,
     }),
-    GithubProvider({
-      clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
-      clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
-    }),
   ],
   secret: process.env.JWT_SECRET,
   pages: {
@@ -51,7 +40,7 @@ export default NextAuth({
   },
   callbacks: {
     async jwt({ token, account, user }) {
-      // innitial signin
+      // Initial sign in
       if (account && user) {
         return {
           ...token,
@@ -68,7 +57,7 @@ export default NextAuth({
         return token;
       }
 
-      // Access token expired, so we need to refresh it...
+      // Access token has expired, so we need to refresh it...
       console.log("ACCESS TOKEN HAS EXPIRED, REFRESHING...");
       return await refreshAccessToken(token);
     },
