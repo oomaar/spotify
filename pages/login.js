@@ -13,7 +13,19 @@ const PageContainer = styled.main`
 `;
 
 const Login = ({ providers }) => {
-  console.log("🚀 ~ file: login.js ~ line 12 ~ Login ~ providers", providers);
+  console.log("🚀 ~ file: login.js ~ line 16 ~ Login ~ providers", providers);
+
+  const test = (
+    <>
+      {Object.values(providers).map((provider) => (
+        <div key={provider.name}>
+          <button onClick={() => signIn(provider.id)}>
+            Sign in with {provider.name}
+          </button>
+        </div>
+      ))}
+    </>
+  );
 
   return (
     <div>
@@ -26,3 +38,13 @@ const Login = ({ providers }) => {
 };
 
 export default Login;
+
+export async function getServerSideProps() {
+  const providers = await getProviders();
+
+  return {
+    props: {
+      providers,
+    },
+  };
+}
