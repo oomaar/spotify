@@ -1,3 +1,4 @@
+import { signOut } from "next-auth/react";
 import {
   SidebarButton,
   SidebarContainer,
@@ -8,6 +9,10 @@ export const Sidebar = () => {
   return (
     <SidebarContainer>
       <SidebarSubContainer>
+        <SidebarButton onClick={() => signOut()}>
+          <i className="bx bx-log-out" />
+          <p>Dummy Log Out</p>
+        </SidebarButton>
         <SidebarButton>
           <i className="bx bx-home" />
           <p>Home</p>
