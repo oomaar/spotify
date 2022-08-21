@@ -1,11 +1,18 @@
-import { LandingContainer } from "../containers";
+import { Sidebar } from "../components/HomePage";
 import { NextHead } from "../global/NextHead";
 
 export default function Home() {
   return (
     <div>
       <NextHead title="Listening is everything - Spotify" />
-      <LandingContainer />
+
+      <div>
+        <main>
+          <Sidebar />
+          {/* Center browse component */}
+        </main>
+        <div>{/* Player at the bottom */}</div>
+      </div>
     </div>
   );
 }
