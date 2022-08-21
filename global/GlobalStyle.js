@@ -24,6 +24,9 @@ export const theme = {
     textHover: `#1dd760`,
     titleColor: `#fff`,
     containerColor: `#222326`,
+    alert: `#fb3b1e`,
+    warning: `#d3a200`,
+    success: `#26580f`,
   },
   font: {
     xlFont: `9.75rem`,
